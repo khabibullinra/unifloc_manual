@@ -53,7 +53,7 @@ Public Function MF_calibr_pipe( _
 '                   перепада давления
 ' c_calibr_fric   - поправка на трение в перепаде давления
 ' roughness_m     - шероховатость трубы
-' q_gas_sm3day    - свободный газ поступающие в трубу.
+' q_gas_sm3day    - свободный газ. дополнительный к PVT потоку.
 ' calibr_type - тип калибровки
 '             0 - подбор параметра c_calibr_grav
 '             1 - подбор параметра c_calibr_fric

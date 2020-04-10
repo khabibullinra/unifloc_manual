@@ -2,16 +2,17 @@
 Public Function MF_p_choke_atma( _
             ByVal qliq_sm3day As Double, _
             ByVal fw_perc As Double, _
-            ByVal dchoke_mm As Double, _
+            ByVal d_choke_mm As Double, _
             Optional ByVal p_calc_from_atma As Double = -1, _
             Optional ByVal calc_along_flow As Boolean = True, _
             Optional ByVal d_pipe_mm As Double = 70, _
             Optional ByVal t_choke_C As Double = 20, _
             Optional ByVal c_calibr_fr As Double = 1, _
-            Optional ByVal str_PVT As String = PVT_DEFAULT)
+            Optional ByVal str_PVT As String = PVT_DEFAULT, _
+            Optional ByVal q_gas_sm3day As Double = 0)
 ' qliq_sm3day   - дебит жидкости в поверхностных условиях
 ' fw_perc       - обводненность
-' dchoke_mm     - диаметр штуцера (эффективный)
+' d_choke_mm     - диаметр штуцера (эффективный)
 ' p_calc_from_atma    - давление с которого начинается расчет, атм
 '                 граничное значение для проведения расчета
 '                 либо давление на входе, либое на выходе
@@ -29,5 +30,6 @@ Public Function MF_p_choke_atma( _
 '                 Q_choke_real = c_calibr_fr * Q_choke_model
 ' str_PVT        - закодированная строка с параметрами PVT.
 '                 если задана - перекрывает другие значения
+' q_gas_sm3day  - свободный газ. дополнительный к PVT потоку.
 ' результат     - число - давления на штуцере на расчетной стороне.
 '                массив значений с параметрами штуцера
