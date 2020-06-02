@@ -6,7 +6,8 @@ Public Function MF_rp_gas_fraction_m3m3( _
                 ByVal t_C As Double, _
                 ByVal fw_perc As Double, _
        Optional ByVal str_PVT As String = PVT_DEFAULT, _
-       Optional ByVal Rp_limit_m3m3 As Double = 500)
+       Optional ByVal Rp_limit_m3m3 As Double = 500, _
+       Optional ByVal ksep_add_fr As Double = 0)
 ' free_gas_d - допустимая доля газа в потоке
 ' p_atma     - давление, атм
 ' t_C        - температура, С.
@@ -14,4 +15,7 @@ Public Function MF_rp_gas_fraction_m3m3( _
 ' str_PVT    - закодированная строка с параметрами PVT.
 '              если задана - перекрывает другие значения
 ' Rp_limit_m3m3 - верхняя граница оценки ГФ
+' ksep_add_fr - коэффициент сепарации дополнительный
+'           для сепарации заданной в потоке. применяется
+'           для сепарации при искомом давлении
 ' результат  - число - газовый фактор, м3/м3.

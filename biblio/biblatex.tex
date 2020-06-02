@@ -14,12 +14,14 @@
 	clearlang=true,% внутренний сброс поля language, если он совпадает с языком из babel/polyglossia
 	defernumbers=true,% нумерация проставляется после двух компиляций, зато позволяет выцеплять библиографию по ключевым словам и нумеровать не из большего списка
 	sortcites=true,% сортировать номера затекстовых ссылок при цитировании (если в квадратных скобках несколько ссылок, то отображаться будут отсортированно, а не абы как)
-	doi=false,% Показывать или нет ссылки на DOI
+	doi=true,% Показывать или нет ссылки на DOI
 	isbn=false,% Показывать или нет ISBN, ISSN, ISRN
+	movenames = false,
+	maxnames = 10,
 	]{biblatex}[2016/09/17]
-	\ltx@iffilelater{biblatex-gost.def}{2017/05/03}%
-	{\toggletrue{bbx:gostbibliography}%
-		\renewcommand*{\revsdnamepunct}{\addcomma}}{}
+%	\ltx@iffilelater{biblatex-gost.def}{2017/05/03}%
+%	{\toggletrue{bbx:gostbibliography}%
+%		\renewcommand*{\revsdnamepunct}{\addcomma}}{}
 }{%Черновик
 	\usepackage[%
 	backend=biber,% движок
@@ -105,9 +107,9 @@
 			\step[fieldset=media, fieldvalue=eresource]
 			\step[fieldset=medium, null]
 		}
-		\map{% использование media=text по умолчанию
-			\step[fieldset=media, fieldvalue=text]
-		}
+	%	\map{% использование media=text по умолчанию
+	%		\step[fieldset=media, fieldvalue=text]
+	%	}
 		\map[overwrite]{% стираем значения всех полей issn
 			\step[fieldset=issn, null]
 		}

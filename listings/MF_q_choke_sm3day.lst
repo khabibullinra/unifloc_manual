@@ -8,9 +8,10 @@ Public Function MF_q_choke_sm3day( _
         Optional ByVal d_pipe_mm As Double = 70, _
         Optional ByVal t_choke_C = 20, _
         Optional ByVal c_calibr_fr As Double = 1, _
-        Optional ByVal str_PVT As String = PVT_DEFAULT)
+        Optional ByVal str_PVT As String = PVT_DEFAULT, _
+        Optional ByVal q_gas_sm3day As Double = 0)
 ' fw_perc      - обводненность
-' d_choke_mm    - диаметр штуцера (эффективный)
+' d_choke_mm   - диаметр штуцера (эффективный)
 ' p_in_atma    - давление на входе (высокой стороне)
 ' p_out_atma   - давление на выходе (низкой стороне)
 ' d_pipe_mm    - диаметр трубы до и после штуцера
@@ -20,4 +21,5 @@ Public Function MF_q_choke_sm3day( _
 '                 Q_choke_real = c_calibr_fr * Q_choke_model
 ' str_PVT      - закодированная строка с параметрами PVT.
 '                 если задана - перекрывает другие значения
+' q_gas_sm3day - дополнительный поток свободного газа
 ' результат    - расход и массив результатов

@@ -1,0 +1,2 @@
+' функция возвращает номер версии Унифлок VBA
+Public Function unf_version() As String

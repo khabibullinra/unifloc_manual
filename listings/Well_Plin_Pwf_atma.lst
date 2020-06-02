@@ -9,14 +9,14 @@ Public Function well_plin_pwf_atma( _
     Optional ByVal pcas_atma As Double, _
     Optional ByVal d_choke_mm As Double, _
     Optional ByVal str_PVT As String = PVT_DEFAULT, _
-    Optional ByVal str_AL As String, _
-    Optional ByVal hmes_habs_list_m As Variant, _
-    Optional ByVal dtub_list_mm As Variant, _
-    Optional ByVal dcas_list_mm As Variant, _
-    Optional ByVal temp_list_C As Variant, _
+    Optional ByVal str_AL As String = "", _
+    Optional ByVal hmes_habs_list_m As Variant = 0, _
+    Optional ByVal dtub_list_mm As Variant = 0, _
+    Optional ByVal dcas_list_mm As Variant = 0, _
+    Optional ByVal temp_list_C As Variant = 0, _
     Optional ByVal hydr_corr As H_CORRELATION = 0, _
     Optional ByVal temp_method As TEMP_CALC_METHOD = StartEndTemp, _
-    Optional ByVal twf_C As Double, _
+    Optional ByVal twf_C As Double = 0, _
     Optional ByVal c_calibr_grav = 1, _
     Optional ByVal c_calibr_fric = 1, _
     Optional ByVal c_calibr_choke = 1, _

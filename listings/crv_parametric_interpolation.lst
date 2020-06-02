@@ -1,4 +1,5 @@
-' интерполяция функции заданной параметрически (параметр номер значения)
+' интерполяция функции заданной параметрически
+' параметр номер значения
 Public Function crv_parametric_interpolation(x_points, y_points, x_val, _
                         Optional ByVal type_interpolation As Integer = 0, _
                         Optional param_points = -1)
@@ -13,11 +14,11 @@ Public Function crv_parametric_interpolation(x_points, y_points, x_val, _
 '             диапазоны могут быть заданы как в строках,
 '             так и в столбцах
 ' type_interpolation - тип интерполяции
-'                    0 - линейная интерполяция
-'                    1 - кубическая интерполяция
-'                    2 - интерполяция Акима (выбросы)
-'                        https://en.wikipedia.org/wiki/Akima_spline
-'                    3 - кубический сплайн Катмулла Рома
-'                        https://en.wikipedia.org/wiki/Cubic_Hermite_spline
+'             0 - линейная интерполяция
+'             1 - кубическая интерполяция
+'             2 - интерполяция Акима (выбросы)
+'                 https://en.wikipedia.org/wiki/Akima_spline
+'             3 - кубический сплайн Катмулла Рома
+'                 https://en.wikipedia.org/wiki/Cubic_Hermite_spline
 ' результат
 '             значение функции для заданного x_val
