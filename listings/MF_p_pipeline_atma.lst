@@ -3,7 +3,7 @@
 Public Function MF_p_pipeline_atma( _
                  ByVal p_calc_from_atma As Double, _
                  ByVal t_calc_from_C As Double, _
-                 ByVal t_val, _
+                 ByVal t_val_C As Variant, _
                  ByVal h_list_m As Variant, _
                  ByVal diam_list_mm As Variant, _
                  ByVal qliq_sm3day As Double, _
@@ -17,11 +17,12 @@ Public Function MF_p_pipeline_atma( _
         Optional ByVal roughness_m As Double = 0.0001, _
         Optional ByVal out_curves As Integer = 1, _
         Optional ByVal out_curves_num_points As Integer = 20, _
-        Optional ByVal num_value As Integer = 0)
+        Optional ByVal num_value As Integer = 0, _
+        Optional ByVal znlf As Boolean = False)
 ' p_calc_from_atma  - давление с которого начинается расчет, атм
 '           граничное значение для проведения расчета
 ' t_calc_from_C - температура в точке где задано давление расчета
-' t_val     - температура вдоль трубопровода
+' t_val_C   - температура вдоль трубопровода
 '           если число то температура на другом конце трубы
 '           если range или таблица [0..N,0..1] то температура
 '           окружающей среды по вертикальной глубине, С
@@ -45,7 +46,7 @@ Public Function MF_p_pipeline_atma( _
 '                       10 расчет по коордиате, поток против
 '                       00 расчет и поток против координате
 '                       01 расчет против координат, поток по
-' hydr_corr   - гидравлическая корреляция, H_CORRELATION
+' hydr_corr - гидравлическая корреляция, H_CORRELATION
 '           BeggsBrill = 0,
 '           Ansari = 1,
 '           Unified = 2,
@@ -66,4 +67,6 @@ Public Function MF_p_pipeline_atma( _
 ' out_curves_num_points - количество точек для вывода значений
 '           между концами трубы.
 ' num_value       - значение которое будет выводиться первым
+' znlf    - флаг для расчета вертикального барботажа (дин уровень)
 ' результат - число - давление на другом конце трубы atma.
+'           и распределение параметров по трубе

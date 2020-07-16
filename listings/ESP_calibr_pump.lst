@@ -6,7 +6,7 @@ Public Function ESP_calibr_pump( _
                  ByVal p_dis_atma As Double, _
         Optional ByVal num_stages As Integer = 1, _
         Optional ByVal freq_Hz As Double = 50, _
-        Optional ByVal pump_id = 674, _
+        Optional ByVal pump_id As Long = 674, _
         Optional ByVal str_PVT As String = PVT_DEFAULT, _
         Optional ByVal t_intake_C As Double = 50, _
         Optional ByVal t_dis_C As Double = 50, _

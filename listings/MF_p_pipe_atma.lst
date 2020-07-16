@@ -1,5 +1,5 @@
-'  расчет распределения давления и температуры в трубе
-'  с использованием многофазных корреляций
+' расчет распределения давления и температуры в трубе
+' (лучше не использовать - используйте MF_p_pipeline_atma)
 Public Function MF_p_pipe_atma( _
         ByVal p_calc_from_atma As Double, _
         ByVal t_calc_from_C As Double, _

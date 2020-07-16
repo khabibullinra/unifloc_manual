@@ -1,0 +1,30 @@
+' функция кодирования газосепаратора
+Public Function ESP_separation_encode_string( _
+            Optional ByVal separation_mode As String, _
+            Optional ByVal gassep_type As Long, _
+            Optional ByVal natsep_type As Long = 0, _
+            Optional ByVal psep_man_atma As Double, _
+            Optional ByVal tsep_man_C As Double, _
+            Optional ByVal ksep_gassep_man_d As Double, _
+            Optional ByVal ksep_nat_man_d As Double, _
+            Optional ByVal ksep_liquid_man_d As Double, _
+            Optional ByVal M_Nm As Double, _
+            Optional ByVal manufacturer As String = "no", _
+            Optional ByVal name As String = "no", _
+            Optional ByVal length_m As Double)
+' separation_mode - режим расчета сепарации
+' gassep_type - тип - номер из базы
+' natsep_type - модель расчета естественной сепарации
+' psep_man_atma  - давление для расчета
+'                     коэффициента сепарации заданного вручную
+' tsep_man_C  - температура для расчета
+'                     коэффициента сепарации заданного вручную
+' ksep_gassep_man_d  - коэффициент сепарации ГС заданный вручную
+' ksep_nat_man_d  - коэффициент сепарации натуральной
+'                   заданный вручную
+' ksep_liquid_man_d - коэффициент сепарации жидкости для режима
+'                     потока через затруб
+' M_Nm  - момент на валу
+' manufacturer - производитель, для справки
+' name  - название кабеля, для справки
+' length_m - длина кабельной линии, м

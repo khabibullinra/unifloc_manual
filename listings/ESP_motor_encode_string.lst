@@ -1,0 +1,37 @@
+' функция кодирования параметров ПЭД в строку
+Public Function ESP_motor_encode_string( _
+            Optional ByVal motor_ID As Long = 0, _
+            Optional ByVal U_surf_high_lin_V As Double, _
+            Optional ByVal f_surf_Hz As Double, _
+            Optional ByVal power_fact_kW As Double, _
+            Optional ByVal U_nom_lin_V As Double, _
+            Optional ByVal P_nom_kW As Double, _
+            Optional ByVal f_nom_Hz As Double, _
+            Optional ByVal eff_nom_fr As Double, _
+            Optional ByVal cosphi_nom_fr As Double, _
+            Optional ByVal slip_nom_fr As Double, _
+            Optional ByVal d_od_mm As Double, _
+            Optional ByVal lambda As Double, _
+            Optional ByVal alpha0 As Double, _
+            Optional ByVal xi0 As Double, _
+            Optional ByVal Ixcf As Double)
+'motor_ID - тип 0 - постоянные значения,
+'               1 - задается по каталожным кривым, ассинхронный
+'               2 - задается по схеме замещения, ассинхронный
+'U_surf_high_lin_V - напряжение на поверхности
+'                    на высокой стороне трансформатора
+'f_surf_Hz  - частота питающего напряжения
+'U_nom_lin_V - номинальное напряжение двигателя, линейное, В
+'P_nom_kW - номинальная мощность двигателя кВт
+'f_nom_Hz - номинальная частота тока, Гц
+'eff_nom_fr - КПД при номинальном режиме работы
+'cosphi_nom_fr - коэффициент мощности при номинальном режиме работы
+'slip_nom_fr - скольжение при номинальном режиме работы
+'d_od_mm - внешний диаметр - габарит ПЭД
+'lambda - для motorID = 2 перегрузочный коэффициент
+'         отношение макс момента к номинальному
+'alpha0 - параметр. влияет на положение макс КПД.для motorID = 2
+'xi0 - параметр. определяет потери момента при холостом ходе.
+'      для motorID = 2
+'Ixcf - поправка на поправку тока холостого хода
+'       при изменении напряжения и частоты от минимальной.

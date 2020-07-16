@@ -5,7 +5,7 @@ Public Function ESP_p_atma( _
                  ByVal p_calc_atma As Double, _
         Optional ByVal num_stages As Integer = 1, _
         Optional ByVal freq_Hz As Double = 50, _
-        Optional ByVal pump_id = 674, _
+        Optional ByVal pump_id As Long, _
         Optional ByVal str_PVT As String = PVT_DEFAULT, _
         Optional ByVal t_intake_C As Double = 50, _
         Optional ByVal t_dis_C As Double = 50, _
@@ -14,7 +14,8 @@ Public Function ESP_p_atma( _
         Optional ByVal c_calibr = 1, _
         Optional ByVal dnum_stages_integrate As Integer = 1, _
         Optional ByVal out_curves_num_points As Integer = 20, _
-        Optional ByVal num_value As Integer = 0)
+        Optional ByVal num_value As Integer = 0, _
+        Optional ByVal q_gas_sm3day As Double = 0)
 ' qliq_sm3day       - дебит жидкости на поверхности
 ' fw_perc           - обводненность
 ' p_calc_atma        - давление для которого делается расчет
@@ -49,4 +50,5 @@ Public Function ESP_p_atma( _
 ' out_curves_num_points - количество точек для вывода значений
 '                   по ступеням
 ' num_value       - значение которое будет выводиться первым
+' q_gas_sm3day    - свободный газ в потоке
 ' результат   - массив значений включающий

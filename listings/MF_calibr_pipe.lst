@@ -1,5 +1,6 @@
 '  подбор параметров потока через трубу при известном
 '  перепаде давления с использованием многофазных корреляций
+' (лучше не использовать - используйте MF_calibr_pipeline)
 Public Function MF_calibr_pipe( _
         ByVal p_calc_from_atma As Double, _
         ByVal p_calc_to_atma As Double, _
