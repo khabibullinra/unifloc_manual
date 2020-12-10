@@ -1,7 +1,7 @@
 ' расчет производительности системы УЭЦН
 ' считает перепад давления, электрические параметры и деградацию КПД
 Public Function ESP_system_calc( _
-                 ByVal qliq_sm3day As Double, _
+                 ByVal q_liq_sm3day As Double, _
                  ByVal fw_perc As Double, _
                  ByVal qgas_free_sm3day As Double, _
                  ByVal p_calc_atma As Double, _
@@ -15,7 +15,7 @@ Public Function ESP_system_calc( _
         Optional ByVal calc_along_flow As Boolean = 1, _
         Optional ByVal out_curves_num_points As Integer = 20, _
         Optional ByVal num_value As Integer = 0)
-' qliq_sm3day       - дебит жидкости на поверхности
+' q_liq_sm3day       - дебит жидкости на поверхности
 ' fw_perc           - обводненность
 ' qgas_free_sm3day  - свободный газ в потоке
 ' p_calc_atma       - давление для которого делается расчет

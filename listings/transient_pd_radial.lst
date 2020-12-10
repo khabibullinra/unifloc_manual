@@ -5,7 +5,7 @@ Function transient_pd_radial(ByVal td As Double, _
                     Optional ByVal cd As Double = 0, _
                     Optional ByVal skin As Double = 0, _
                     Optional ByVal rd As Double = 1, _
-                    Optional model As Integer = 0)
+                    Optional Model As Integer = 0)
 ' td         - безразмерное время для которого проводится расчет
 ' сd         - безразмерный коэффициент влияния ствола скважины
 ' skin       - скин-фактор, безразмерный skin>0.

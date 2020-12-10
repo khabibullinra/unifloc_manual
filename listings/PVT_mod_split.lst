@@ -1,0 +1,22 @@
+' функция расчета свойств разделенного потока флюидов
+Public Function PVT_mod_split( _
+               ByVal k_sep_gas As Double, _
+               ByVal k_sep_oil As Double, _
+               ByVal k_sep_wat As Double, _
+               ByVal p_atma As Double, _
+               ByVal t_C As Double, _
+               ByVal PVT_stream As String, _
+               ByVal PVT_prop As String, _
+      Optional ByVal param As String = "")
+' k_sep_gas  - коэффициент сепарации газа
+' k_sep_oil  - коэффициент сепарации газа
+' k_sep_wat  - коэффициент сепарации газа
+' p_atma     - давление, атм
+' t_C        - температура, С.
+' PVT_stream - параметры потока флюидов, дебит, обводненность и пр
+'              используйте encode_pvt_stream для генерации
+' PVT_prop   - статичные свойства флюида - плотности rsb и пр
+'              используйте encode_pvt_prop для генерации
+' param      - параметры расчета и вывода результатов
+' результат  - массив, расход ГЖС в рабочих условиях,
+'              подпись, и лог расчета если подключен

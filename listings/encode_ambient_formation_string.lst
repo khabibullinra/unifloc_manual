@@ -1,0 +1,21 @@
+' функция кодирования температурных парамметров окружающей среды
+Public Function encode_ambient_formation_string( _
+    Optional ByVal therm_cond_form_WmC As Double = 2.4252, _
+    Optional ByVal sp_heat_capacity_form_JkgC As Double = 200, _
+    Optional ByVal therm_cond_cement_WmC As Double = 6.965, _
+    Optional ByVal therm_cond_tubing_WmC As Double = 32, _
+    Optional ByVal therm_cond_casing_WmC As Double = 32, _
+    Optional ByVal heat_transfer_casing_liquid_Wm2C As Double = 200, _
+    Optional ByVal heat_transfer_casing_gas_Wm2C As Double = 10, _
+    Optional ByVal heat_transfer_fluid_convection_Wm2C As Double = 200, _
+    Optional ByVal t_calc_hr As Double = 240)
+' therm_cond_form_WmC - теплопроводность породы окружающей среды
+' sp_heat_capacity_form_JkgC - удельная теплоемкость породы окружающей среды
+' therm_cond_cement_WmC - теплопроводность цементного камня вокруг скважины
+' therm_cond_tubing_WmC - теплопроводность стенок НКТ
+' heat_transfer_casing_liquid_Wm2C - теплопередача через затруб с жидкостью
+' heat_transfer_casing_gas_Wm2C - теплопередача через затруб с газом
+' heat_transfer_fluid_convection_Wm2C - теплопередача в потоке
+'                               с жидкостью за счет конвекции
+' t_calc_hr - время на которое расчитывается распределение температуры
+'

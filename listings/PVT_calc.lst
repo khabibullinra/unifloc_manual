@@ -1,0 +1,15 @@
+' функция расчета всех PVT свойств нефти при заданных
+' давлении и температуре
+Public Function PVT_calc( _
+            ByVal p_atma As Double, _
+            ByVal t_C As Double, _
+            ByVal PVT_prop As String, _
+            Optional ByVal param As String = "")
+' p_atma   - давление, атм
+' t_C      - температура, С.
+' PVT_prop - статичные свойства флюида - плотности rsb и пр
+'            используйте encode_pvt_prop для генерации
+' param    - набор параметров расчета в виде json строки
+'
+' Возвращает значения всех PVT свойств
+' для заданных термобарических условий.

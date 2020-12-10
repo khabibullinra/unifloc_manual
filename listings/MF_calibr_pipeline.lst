@@ -7,7 +7,7 @@ Public Function MF_calibr_pipeline( _
              ByVal t_val, _
              ByVal h_list_m As Variant, _
              ByVal diam_list_mm As Variant, _
-             ByVal qliq_sm3day As Double, _
+             ByVal q_liq_sm3day As Double, _
              ByVal fw_perc As Double, _
     Optional ByVal q_gas_sm3day As Double = 0, _
     Optional ByVal str_PVT As String = PVT_DEFAULT, _
@@ -33,8 +33,8 @@ Public Function MF_calibr_pipeline( _
 ' diam_list_mm  - внутрнний диаметр трубы, если число то задается
 '           постоянный диаметр, если range или таблица [0..N,0..1]
 '           то задается зависимость диаметра от измеренной длины
-' qliq_sm3day - дебит жидкости в поверхностных условиях, нм3/сут
-'           если qliq_sm3day =0 и q_gas_sm3day > 0
+' q_liq_sm3day - дебит жидкости в поверхностных условиях, нм3/сут
+'           если q_liq_sm3day =0 и q_gas_sm3day > 0
 '           тогда считается барботаж газа через жидкость
 ' fw_perc   - обводненность объемная в стандартных условиях
 ' q_gas_sm3day  - свободный газ нм3/сут. дополнительный к PVT потоку.

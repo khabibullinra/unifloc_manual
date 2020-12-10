@@ -1,0 +1,11 @@
+' Функция декодирования json строки,
+' позволяет вывести содержимое json строки в таблицу
+Public Function decode_json(json, _
+                          Optional transpose As Boolean = False, _
+                          Optional keys_filter, _
+                          Optional only_values As Boolean = False)
+' json   - строка содержащая результаты расчета
+' transpose - выбор вывода в строки или в столбцы
+' keys_filter - строка с ключами, которые надо вывести
+' only_values - если = 1 подписи выводиться не будут
+' результат - закодированная строка

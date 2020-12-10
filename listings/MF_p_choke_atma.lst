@@ -1,6 +1,6 @@
-' расчет давления в штуцере
+' расчет давления в штуцере, старый вариант
 Public Function MF_p_choke_atma( _
-            ByVal qliq_sm3day As Double, _
+            ByVal q_liq_sm3day As Double, _
             ByVal fw_perc As Double, _
             ByVal d_choke_mm As Double, _
             Optional ByVal p_calc_from_atma As Double = -1, _
@@ -10,12 +10,12 @@ Public Function MF_p_choke_atma( _
             Optional ByVal c_calibr_fr As Double = 1, _
             Optional ByVal str_PVT As String = PVT_DEFAULT, _
             Optional ByVal q_gas_sm3day As Double = 0)
-' qliq_sm3day   - дебит жидкости в поверхностных условиях
+' q_liq_sm3day   - дебит жидкости в поверхностных условиях
 ' fw_perc       - обводненность
 ' d_choke_mm     - диаметр штуцера (эффективный)
 ' p_calc_from_atma    - давление с которого начинается расчет, атм
 '                 граничное значение для проведения расчета
-'                 либо давление на входе, либое на выходе
+'                 либо давление на входе, либо на выходе
 ' calc_along_flow - флаг направления расчета относительно потока
 '     если = 1 то расчет по потоку
 '     ищется давление на выкиде по известному давлению на входе,

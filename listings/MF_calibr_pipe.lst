@@ -9,7 +9,7 @@ Public Function MF_calibr_pipe( _
         ByVal length_m As Double, _
         ByVal theta_deg As Double, _
         ByVal d_mm As Double, _
-        ByVal qliq_sm3day As Double, _
+        ByVal q_liq_sm3day As Double, _
         ByVal fw_perc As Double, _
         Optional ByVal q_gas_sm3day As Double = 0, _
         Optional ByVal str_PVT As String = PVT_DEFAULT, _
@@ -27,8 +27,8 @@ Public Function MF_calibr_pipe( _
 ' length_m        - Длина трубы, измеренная, м
 ' theta_deg       - угол направления потока к горизонтали
 ' d_mm            - внутренний диаметр трубы
-' qliq_sm3day     - дебит жидкости в поверхностных условиях
-'              если qliq_sm3day =0 и q_gas_sm3day > 0
+' q_liq_sm3day     - дебит жидкости в поверхностных условиях
+'              если q_liq_sm3day =0 и q_gas_sm3day > 0
 '              тогда считается барботаж газа через жидкость
 ' fw_perc         - обводненность
 ' q_gas_sm3day    - свободный газ. дополнительный к PVT потоку.

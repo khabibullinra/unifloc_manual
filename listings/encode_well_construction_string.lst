@@ -1,0 +1,26 @@
+' функция кодирования параметров работы скважины с газлифтом
+Public Function encode_well_construction_string( _
+             ByVal h_perf_m As Double, _
+             ByVal h_tub_m As Double, _
+             ByVal h_list_m As Variant, _
+             ByVal d_tub_list_mm As Variant, _
+             ByVal d_cas_list_mm As Variant, _
+    Optional ByVal d_choke_mm As Double, _
+    Optional ByVal t_val_C As Variant, _
+    Optional ByVal rough_m As Double = 0.0001)
+'h_perf_m - глубина перфорации по длине скважины
+'           точка узлового анализа для забоя
+'h_tub_m - глубина спуска НКТ, или глубина
+'          спуска ЭЦН
+'h_list_m  - траектория скважины, если число то измеренная
+'           длина, range или таблица [0..N,0..1] то траектория
+'d_tub_list_mm - диаметр НКТ. range или таблица [0..N,0..1]
+'d_cas_list_mm - диаметр эксп колонны.
+'              range или таблица [0..N,0..1]
+'d_choke_mm - диаметр штуцера
+'t_val_C   - температура вдоль скважины
+'           если число то температура на устье скважины
+'           если range или таблица [0..N,0..1] то температура
+'           окружающей среды по вертикальной глубине, С
+'rough_m    - шероховатость трубы
+' результат     - строка с закодированными параметрами

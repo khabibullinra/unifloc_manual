@@ -1,0 +1,25 @@
+' расчет давления в штуцере
+Public Function MF_choke_p_atma( _
+                     ByVal d_choke_mm As Double, _
+                     ByVal p_calc_from_atma As Double, _
+                     ByVal q_liq_sm3day As Double, _
+                     ByVal fw_perc As Double, _
+            Optional ByVal t_choke_C As Double = 20, _
+            Optional ByVal d_pipe_mm As Double = 70, _
+            Optional ByVal param As String = "", _
+            Optional ByVal str_PVT As String = PVT_DEFAULT, _
+            Optional ByVal q_gas_sm3day As Double = 0)
+' d_choke_mm    - диаметр штуцера (эффективный)
+' p_calc_from_atma - давление с которого начинается расчет, атм
+'                    граничное значение для проведения расчета
+'                    либо давление на входе, либо на выходе
+' q_liq_sm3day   - дебит жидкости в поверхностных условиях
+' fw_perc       - обводненность
+' t_choke_C      - температура потока, С.
+' d_pipe_mm      - диаметр трубы до и после штуцера
+' param          - параметры расчета json строка
+' str_PVT        - закодированная строка с параметрами PVT.
+'                 если задана - перекрывает другие значения
+' q_gas_sm3day  - свободный газ. дополнительный к PVT потоку.
+' результат     - число - давления на штуцере на расчетной стороне.
+'                массив значений с параметрами штуцера

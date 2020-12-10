@@ -1,7 +1,7 @@
 ' расчет корректирующего фактора (множителя) модели штуцера под замеры
 ' быстрый расчет - калибровка вычисляется
 Public Function MF_calibr_choke_fast( _
-            ByVal qliq_sm3day As Double, _
+            ByVal q_liq_sm3day As Double, _
             ByVal fw_perc As Double, _
             ByVal d_choke_mm As Double, _
             Optional ByVal p_in_atma As Double = -1, _
@@ -10,7 +10,7 @@ Public Function MF_calibr_choke_fast( _
             Optional ByVal t_choke_C As Double = 20, _
             Optional ByVal str_PVT As String = PVT_DEFAULT, _
             Optional ByVal q_gas_sm3day As Double = 0)
-' qliq_sm3day   - дебит жидкости в ст. условиях
+' q_liq_sm3day   - дебит жидкости в ст. условиях
 ' fw_perc       - обводненность
 ' d_choke_mm    - диаметр штуцера (эффективный), мм
 ' p_in_atma     - давление на входе (высокой стороне)

@@ -10,7 +10,7 @@ Public Function ESP_motor_calc_slip(ByVal S As Double, _
                            Optional ByVal cosphi_nom_fr As Double = 0.8, _
                            Optional ByVal slip_nom_fr As Double = 0.05, _
                            Optional ByVal d_od_mm As Double = 117, _
-                           Optional ByVal lambda As Double = 2, _
+                           Optional ByVal Lambda As Double = 2, _
                            Optional ByVal alpha0 As Double = 0.4, _
                            Optional ByVal xi0 As Double = 1.05, _
                            Optional ByVal Ixcf As Double = 0.4)

@@ -1,6 +1,6 @@
 ' расчет подстроечных параметров системы УЭЦН
 Public Function ESP_calibr_pump( _
-                 ByVal qliq_sm3day As Double, _
+                 ByVal q_liq_sm3day As Double, _
                  ByVal fw_perc As Double, _
                  ByVal p_int_atma As Double, _
                  ByVal p_dis_atma As Double, _
@@ -15,7 +15,7 @@ Public Function ESP_calibr_pump( _
         Optional ByVal c_calibr = 1, _
         Optional ByVal dnum_stages_integrate As Integer = 1, _
         Optional ByVal calibr_type As Integer = 0)
-' qliq_sm3day       - дебит жидкости на поверхности
+' q_liq_sm3day       - дебит жидкости на поверхности
 ' fw_perc           - обводненность
 ' p_int_atma        - давление на приеме насоса
 ' p_dis_atma        - давление на выкиде насоса
