@@ -1,6 +1,6 @@
 %%% Реализация библиографии пакетами biblatex и biblatex-gost с использованием движка biber %%%
 
-\usepackage{csquotes} % biblatex рекомендует его подключать. Пакет для оформления сложных блоков цитирования.
+
 %%% Загрузка пакета с основными настройками %%%
 \makeatletter
 \ifnumequal{\value{draft}}{0}{% Чистовик
@@ -38,31 +38,7 @@
 \DefineBibliographyStrings{russian}{number={\textnumero}}
 \fi
 
-\ifsynopsis
-\ifnumgreater{\value{usefootcite}}{0}{
-	\ExecuteBibliographyOptions{autocite=footnote}
-	\newbibmacro*{cite:full}{%
-		\printtext[bibhypertarget]{%
-			\usedriver{%
-				\DeclareNameAlias{sortname}{default}%
-			}{%
-				\thefield{entrytype}%
-			}%
-		}%
-		\usebibmacro{shorthandintro}%
-	}
-	\DeclareCiteCommand{\smartcite}[\mkbibfootnote]{%
-		\usebibmacro{prenote}%
-	}{%
-		\usebibmacro{citeindex}%
-		\usebibmacro{cite:full}%
-	}{%
-		\multicitedelim%
-	}{%
-		\usebibmacro{postnote}%
-	}
-}{}
-\fi
+
 
 
 %%% Подключение файлов bib %%%
@@ -182,8 +158,7 @@
 	}
 }
 
-\ifsynopsis
-\else
+
 \DeclareSourcemap{ %модификация bib файла перед тем, как им займётся biblatex
 	\maps{
 		\map[overwrite]{% стираем значения всех полей addendum
@@ -192,7 +167,7 @@
 		}
 	}
 }
-\fi
+
 
 \defbibfilter{vakscopuswos}{%
 	keyword=biblioauthorvak or keyword=biblioauthorscopus or keyword=biblioauthorwos
@@ -454,11 +429,8 @@
 % Порядок команд `\printbibliography` должен соответствовать порядку в файле common/characteristic.tex
 \newcommand*{\insertbiblioauthorgrouped}{
 	\section*{\bibtitleauthor}
-	\ifsynopsis
-	\printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=true] % Работы автора из списка ВАК (сброс нумерации)
-	\else
+	
 	\printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorvak,    title=\bibtitleauthorvak,resetnumbers=false] % Работы автора из списка ВАК (сквозная нумерация)
-	\fi
 	\printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorwos,    title=\bibtitleauthorwos,resetnumbers=false]% Работы автора, индексируемые Web of Science
 	\printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorscopus, title=\bibtitleauthorscopus,resetnumbers=false]% Работы автора, индексируемые Scopus
 	\printbibliography[heading=pubsubgroup, section=0, keyword=biblioauthorconf,   title=\bibtitleauthorconf,resetnumbers=false]% Тезисы конференций
