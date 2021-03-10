@@ -1,0 +1,13 @@
+'Функция кодирования параметров потока флюидов в строку,
+Public Function encode_feed( _
+          Optional ByVal q_liq_sm3day As Double = 10, _
+          Optional ByVal fw_perc As Double = -1, _
+          Optional ByVal rp_m3m3 As Double = -1, _
+          Optional ByVal q_gas_free_sm3day As Double = -1, _
+          Optional ByVal fluid As String = PVT_DEFAULT)
+' q_liq_sm3day  - дебит жидкости в ст.условиях.
+' fw_perc       - ободненность, %
+' rp_m3m3       - газовый фактор, м3/м3:
+' q_gas_free_sm3day - расход свободного газа, ст. м3/сут
+'
+' результат - закодированная строка

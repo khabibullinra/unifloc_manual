@@ -1,0 +1,12 @@
+' кодирование параметров температурной модели трубы/скважины
+Public Function encode_t_model(Optional t_model As TEMP_CALC_METHOD = StartEndTemp, _
+                               Optional t_list_C As Variant = 50, _
+                               Optional t_start_C As Double = -100, _
+                               Optional t_end_C As Double = -100, _
+                               Optional param As String = "")
+' t_model   - номер температурной модели
+' t_list_C  - массив n*2 распределения температуры
+' t_start_C - температура в начале трубы
+' t_end_C   - температура в конце трубы
+' param     - параметры температурной модели
+'             список параметров в мануале

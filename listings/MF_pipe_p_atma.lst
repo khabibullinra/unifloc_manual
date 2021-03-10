@@ -1,0 +1,25 @@
+'  расчет распределения давления и температуры в трубопроводе
+'  с использованием многофазных корреляций
+Public Function MF_pipe_p_atma( _
+                 ByVal p_calc_from_atma As Double, _
+                 ByVal t_calc_from_C As Double, _
+        Optional ByVal construction As String = "", _
+        Optional ByVal feed As String = "", _
+        Optional ByVal t_model As String = "", _
+        Optional ByVal calc_along_coord As Boolean = True, _
+        Optional ByVal flow_along_coord As Boolean = True, _
+        Optional ByVal param As String)
+' p_calc_from_atma  - давление с которого начинается расчет, атм
+'           граничное значение для проведения расчета
+' t_calc_from_C - температура в точке где задано давление расчета
+' feed      - параметры потока флюидов json строка. Используйте
+'           функцию encode_feed() для генерации
+' construction - параметры конструкции json строка. Используйте
+'           функцию encode_pipe() для генерации
+' t_model   - параметры температурной модели json строка.
+'           Используйте функцию encode_feed() для генерации
+' calc_along_coord - направление расчета относительно координат.
+' flow_along_coord - направление потока относительно координат.
+' param     - дополнительные параметры расчета потока
+' результат - число - давление на другом конце трубы atma.
+'           и распределение параметров по трубе

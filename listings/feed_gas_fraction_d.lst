@@ -1,0 +1,15 @@
+' функция расчета коэффициента Джоуля Томсона
+Public Function feed_gas_fraction_d( _
+               ByVal p_atma As Double, _
+               ByVal t_C As Double, _
+               ByVal feed As String, _
+      Optional ByVal param As String = "", _
+      Optional ByVal ksep_add_fr As Double = 0)
+' p_atma     - давление, атм
+' t_C        - температура, С.
+' feed - параметры потока флюидов, дебит, обводненность и пр
+'              используйте encode_feed для генерации
+' param      - параметры расчета и вывода результатов
+' ksep_add_fr - коэффициент сепарации газа из потока
+' результат  - массив, значение коэффициента Джоуля Томсона потока,
+'              подпись, и лог расчета если подключен

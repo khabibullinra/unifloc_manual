@@ -1,0 +1,19 @@
+' расчет корректирующего фактора (множителя) модели штуцера под замеры
+' быстрый расчет - калибровка вычисляется
+Public Function MF_choke_calibr_fast( _
+            ByVal feed As String, _
+            ByVal d_choke_mm As Double, _
+            Optional ByVal p_in_atma As Double = -1, _
+            Optional ByVal p_out_atma As Double = -1, _
+            Optional ByVal d_pipe_mm As Double = 70, _
+            Optional ByVal t_choke_C As Double = 20, _
+            Optional ByVal param As String = "")
+' feed         - закодированная строка с параметрами потока.
+' d_choke_mm    - диаметр штуцера (эффективный), мм
+' p_in_atma     - давление на входе (высокой стороне)
+' p_out_atma    - давление на выходе (низкой стороне)
+' d_pipe_mm     - диаметр трубы до и после штуцера, мм
+' t_choke_C     - температура, С.
+' param        - параметры расчета json строка
+' результат     - число - калибровочный коэффициент для модели.
+'                 штуцера  - множитель на дебит через штуцер

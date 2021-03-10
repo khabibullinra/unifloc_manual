@@ -1,13 +1,13 @@
-' расчет дебита по давлению и продуктивности
-Public Function IPR_q_liq_sm3day( _
+' расчет забойного давления по дебиту и продуктивности
+Public Function IPR_p_wf_atma( _
                  ByVal pi_sm3dayatm As Double, _
                  ByVal p_res_atma As Double, _
-                 ByVal p_wf_atma As Double, _
+                 ByVal q_liq_sm3day As Double, _
         Optional ByVal fw_perc As Double = 0, _
         Optional ByVal pb_atma As Double = -1)
 ' pi_sm3dayatm   - коэффициент продуктивности, ст.м3/сут/атм
 ' p_res_atma      - пластовое давление, абс. атм
-' p_wf_atma       - забойное давление, абс. атм
+' q_liq_sm3day    - дебит жидкости скважины на поверхности, ст.м3/сут
 ' fw_perc        - обводненность, %
 ' pb_atma        - давление насыщения, абс. атм
-' результат      - значение дебита жидкости, ст.м3/сут
+' результат      - значение забойного давления, абс. атм

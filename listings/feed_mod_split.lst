@@ -1,0 +1,19 @@
+' функция расчета свойств разделенного потока флюидов
+Public Function feed_mod_split( _
+               ByVal k_sep_gas As Double, _
+               ByVal k_sep_oil As Double, _
+               ByVal k_sep_wat As Double, _
+               ByVal p_atma As Double, _
+               ByVal t_C As Double, _
+               ByVal feed As String, _
+      Optional ByVal param As String = "")
+' k_sep_gas  - коэффициент сепарации газа
+' k_sep_oil  - коэффициент сепарации газа
+' k_sep_wat  - коэффициент сепарации газа
+' p_atma     - давление, атм
+' t_C        - температура, С.
+' feed - параметры потока флюидов, дебит, обводненность и пр
+'              используйте encode_feed для генерации
+' param      - параметры расчета и вывода результатов
+' результат  - массив, расход ГЖС в рабочих условиях,
+'              подпись, и лог расчета если подключен

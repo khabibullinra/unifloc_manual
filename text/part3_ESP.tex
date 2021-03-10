@@ -139,13 +139,13 @@ $$ P_{dis} = P_{int} + \sum_i^n{\rho_{mix,rc}(\bar{P}_{st,i},T) g h_{st,i}(Q_{mi
 	
 \end{itemize}
 
-\putlisting{listings/ESP_p_atma.lst}
+%\putlisting{listings/ESP_p_atma.lst}
 
 \subsection{ESP\_calibr\_pump – подбор подстроечных параметров ЭЦН}
 
 Функция позволяет по известным значениям давления на приеме насоса и на выкиде насоса найти значения калибровочных параметров - калибровки по напору и по расходу. Ищется только одно значение калибровочного параметра.
 
-\putlisting{listings/ESP_calibr_pump.lst}
+%\putlisting{listings/ESP_calibr_pump.lst}
 
 
 \subsection{Кодирование параметров ЭЦН в строке}
@@ -153,13 +153,13 @@ $$ P_{dis} = P_{int} + \sum_i^n{\rho_{mix,rc}(\bar{P}_{st,i},T) g h_{st,i}(Q_{mi
 
 Реализованы две функции - кодирования и декодирования строки ЭЦН.
 
-\putlisting{listings/ESP_pump_encode_string.lst}
+%\putlisting{listings/ESP_pump_encode_string.lst}
 
-\putlisting{listings/ESP_motor_encode_string.lst}
+%\putlisting{listings/ESP_motor_encode_string.lst}
 
-\putlisting{listings/ESP_cable_encode_string.lst}
+%\putlisting{listings/ESP_cable_encode_string.lst}
 
-\putlisting{listings/ESP_separation_encode_string.lst}
+%\putlisting{listings/ESP_separation_encode_string.lst}
 \subsection{ESP\_system\_calc – расчет параметров работы УЭЦН}
 Функция рассчитывает полный набор параметров работы УЭЦН при заданных параметрах флюида и термобарических условиях. В отличии от функции  \mintinline{vb.net}{ESP_p_atma} учитывает проскальзывание при расчете частоты вращения вала и рассчитывает электрические параметры работы ЭЦН.
 

@@ -1,4 +1,5 @@
 ' функция кодирования диапазона ячеек в json строку
-Public Function encode_json(rng)
+Public Function encode_json(rng, _
+        Optional always_collection As Boolean = False)
 ' rng       - диапазон ячеек для кодирования
 ' результат - закодированная строка
