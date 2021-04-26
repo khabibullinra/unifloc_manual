@@ -1,0 +1,40 @@
+'функция расчета давления на выходе/входе ЭЦН в рабочих условиях
+'большинство параметров задается явно
+Public Function ESP_p_atma( _
+                 ByVal p_calc_atma As Double, _
+        Optional ByVal t_intake_C As Double = 50, _
+        Optional ByVal t_dis_C As Double = 50, _
+        Optional ByVal feed As String = "", _
+        Optional ByVal pump_id As Long, _
+        Optional ByVal num_stages As Integer = 1, _
+        Optional ByVal freq_Hz As Double = 50, _
+        Optional ByVal calc_along_flow As Boolean = True, _
+        Optional ByVal calibr_head As Double = 1, _
+        Optional ByVal calibr_rate As Double = 1, _
+        Optional ByVal calibr_power As Double = 1, _
+        Optional ByVal gas_correct_model As Integer = 0, _
+        Optional ByVal gas_correct_stage_by_stage As Integer = 0, _
+        Optional ByVal param As String)
+' p_calc_atma      - давление для которого делается расчет
+'                    либо давление на приеме насоса
+'                    либо давление на выкиде насоса
+'                    определяется параметром calc_along_flow
+' t_intake_C       - температура на приеме насоcа
+' t_dis_C          - температура на выкиде насоса.
+'             если = 0 и calc_along_flow = 1 то рассчитывается
+' feed     - параметры потока флюидов json строка. Используйте
+'            функцию encode_feed() для генерации
+' pump_id          - идентификатор насоса
+' num_stages       - количество ступеней
+' freq_Hz          - частота вращения вала ЭЦН, Гц
+' calc_along_flow  - режим расчета снизу вверх или сверху вниз
+'          calc_along_flow = True => p_atma давление на приеме
+'          calc_along_flow = False => p_atma давление на выкиде
+' calibr_head - калибровка (множитель) на напор
+' calibr_rate - калибровка (множитель) на расход
+' calibr_power - калибровка (множитель) на мощность
+' gas_correct_model - модель калибровки по газу
+' gas_correct_stage_by_stage - модель применятеся
+'                     для всех ступеней по отдельности
+' param     - дополнительные параметры расчета потока
+' результат   - массив значений включающий

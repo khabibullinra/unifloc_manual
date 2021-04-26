@@ -5,13 +5,11 @@ Public Function feed_rp_gas_fraction_m3m3( _
                ByVal p_atma As Double, _
                ByVal t_C As Double, _
                ByVal feed As String, _
-      Optional ByVal param As String = "", _
       Optional ByVal ksep_add_fr As Double = 0)
 ' free_gas_d - допустимая доля газа в потоке;
 ' t_C        - температура, С.
 ' feed - параметры потока флюидов, дебит, обводненность и пр
 '              используйте encode_feed для генерации
-' param      - параметры расчета и вывода результатов
 ' ksep_add_fr - коэффициент сепарации газа из потока
-' результат  - массив, число - давление,
+' результат  - число - давление,
 '              подпись, и лог расчета если подключен

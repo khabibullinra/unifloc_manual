@@ -13,8 +13,8 @@ Public Function MF_dpdl_atmm(ByVal d_m As Double, _
     Optional ByVal theta_deg As Double = 90, _
     Optional ByVal hcorr As Integer = 1, _
     Optional ByVal param_out As Integer = 0, _
-    Optional ByVal c_calibr_grav As Double = 1, _
-    Optional ByVal c_calibr_fric As Double = 1)
+    Optional ByVal calibr_grav As Double = 1, _
+    Optional ByVal calibr_fric As Double = 1)
 ' расчет градиента давления по одной из корреляций
 ' d_m - диаметр трубы в которой идет поток
 ' p_atma - давление в точке расчета
@@ -30,5 +30,5 @@ Public Function MF_dpdl_atmm(ByVal d_m As Double, _
 ' theta_deg - угол от горизонтали
 ' hcorr  - тип корреляции
 ' param_out - параметр для вывода
-' c_calibr_grav - калибровка гравитации
-' c_calibr_fric - калибровка трения
+' calibr_grav - калибровка гравитации
+' calibr_fric - калибровка трения

@@ -8,7 +8,7 @@ Public Function GLV_p_atma(ByVal d_mm As Double, _
                            Optional ByVal t_C As Double = 25, _
                            Optional ByVal calc_along_flow As Boolean = False, _
                            Optional ByVal p_open_atma As Double = 0, _
-                           Optional ByVal c_calibr As Double = 1)
+                           Optional ByVal calibr As Double = 1)
 ' d_mm          - диаметр клапана, мм
 ' p_calc_atma   - давление на входе (выходе) клапана, атма
 ' q_gas_sm3day  - расход газа, ст. м3/сут
@@ -18,4 +18,4 @@ Public Function GLV_p_atma(ByVal d_mm As Double, _
 '              0 - против потока (расчет давления на входе);
 '              1 - по потоку (расчет давления на выходе).
 ' p_open_atma    - давление открытия/закрытия клапана, атм
-' c_calibr       - коэффициент калибровки
+' calibr       - коэффициент калибровки

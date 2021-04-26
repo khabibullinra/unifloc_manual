@@ -1,21 +1,23 @@
-' расчет давления в штуцере (дросселе)
-Public Function MF_choke_p_atma( _
+' расчет штуцера (дросселя) с выводом всех параметров расчета
+' тип расчета зависит от исходных данных
+Public Function MF_choke_calc( _
                      ByVal d_choke_mm As Double, _
                      ByVal feed As String, _
-                     ByVal p_calc_from_atma As Double, _
+            Optional ByVal p_in_atma As Double = -1, _
+            Optional ByVal p_out_atma As Double = -1, _
             Optional ByVal t_choke_C As Double = 20, _
             Optional ByVal d_pipe_mm As Double = 70, _
-            Optional ByVal calc_along_flow As Boolean = True, _
             Optional ByVal calibr As Double = 1, _
             Optional ByVal param As String = "")
 ' d_choke_mm      - диаметр штуцера (эффективный)
 ' feed            - закодированная строка с параметрами потока.
-' p_calc_from_atma - давление с которого начинается расчет, атм
-'                  граничное значение для проведения расчета
-'                  либо давление на входе, либо на выходе
+' p_in_atma       - давление на входе в штуцер, атм
+'                   если задано, то используется в расчете
+' p_out_atma      - давление на выходе из штуцера, атм
+'                   если задано, то используется в расчете
 ' t_choke_C       - температура потока, С.
 ' d_pipe_mm       - диаметр трубы до и после штуцера
-' calc_along_flow - флаг направления расчета относительно потока
+' calibr          - базовая калибровка штуцера (на расход)
 ' param           - параметры расчета json строка
 ' результат       - число или массив значений с параметрами штуцера
 '                   и давление на штуцере на расчетной стороне.

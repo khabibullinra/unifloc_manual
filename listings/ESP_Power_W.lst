@@ -6,13 +6,14 @@ Public Function ESP_power_W( _
         Optional ByVal freq_Hz As Double = 50, _
         Optional ByVal pump_id As Long = 737, _
         Optional ByVal mu_cSt As Double = -1, _
-        Optional ByVal c_calibr = 1) As Double
-' мощность УЭЦН номинальная потребляемая
+        Optional ByVal calibr_head As Double = 1, _
+        Optional ByVal calibr_rate As Double = 1, _
+        Optional ByVal calibr_power As Double = 1)
 ' qliq_m3day - дебит жидкости в условиях насоса (стенд)
 ' num_stages  - количество ступеней
-' freq_Hz       - частота вращения насоса
-' pump_id     - номер насоса в базе данных
-' mu_cSt     - вязкость жидкости
-' c_calibr    - коэффициент поправки на напор.
-'               если массив то второе значение - поправыка на подачу (множитель)
-'               третье на мощность (множитель)
+' freq_Hz    - частота вращения насоса
+' pump_id    - номер насоса в базе данных
+' mu_cSt     - вязкость жидкости, сСт;
+' calibr_head - калибровка (множитель) на напор
+' calibr_rate - калибровка (множитель) на расход
+' calibr_power - калибровка (множитель) на мощность

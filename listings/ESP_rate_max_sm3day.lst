@@ -3,6 +3,9 @@
 Public Function ESP_rate_max_sm3day( _
     Optional ByVal freq_Hz As Double = 50, _
     Optional ByVal pump_id As Long, _
-    Optional ByVal mu_cSt As Double = -1) As Double
+    Optional ByVal mu_cSt As Double = -1, _
+    Optional ByVal calibr_rate As Double = 1) As Double
 ' freq_Hz   - частота вращения ЭЦН
 ' pump_id    - идентификатор насоса в базе данных
+' mu_cSt - вязкость для расчета поправок
+' calibr_rate - калибровка на расход

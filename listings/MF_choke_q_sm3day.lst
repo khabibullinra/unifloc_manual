@@ -6,6 +6,7 @@ Public Function MF_choke_q_sm3day( _
                      ByVal p_out_atma As Double, _
             Optional ByVal t_choke_C = 20, _
             Optional ByVal d_pipe_mm As Double = 70, _
+            Optional ByVal calibr As Double = 1, _
             Optional ByVal param As String = "")
 ' feed         - закодированная строка с параметрами потока.
 ' d_choke_mm   - диаметр штуцера (эффективный)

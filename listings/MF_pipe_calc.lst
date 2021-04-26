@@ -1,6 +1,6 @@
 '  расчет распределения давления и температуры в трубопроводе
-'  выводит результат в виде таблицы значений
-Public Function MF_pipe_p_atma( _
+'  выводит полный набор результатов в виде массива json параметров
+Public Function MF_pipe_calc( _
                  ByVal p_calc_from_atma As Double, _
                  ByVal t_calc_from_C As Double, _
         Optional ByVal construction As String = "", _
