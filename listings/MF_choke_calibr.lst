@@ -5,6 +5,7 @@ Public Function MF_choke_calibr( _
             ByVal d_choke_mm As Double, _
             Optional ByVal p_in_atma As Double = -1, _
             Optional ByVal p_out_atma As Double = -1, _
+            Optional ByVal calibr_type As Integer = 0, _
             Optional ByVal d_pipe_mm As Double = 70, _
             Optional ByVal t_choke_C As Double = 20, _
             Optional ByVal param As String = "")
